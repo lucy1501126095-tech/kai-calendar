@@ -15,7 +15,7 @@ from .backup import BackupManager
 class KaiCalendar(Star):
     def __init__(self, context: Context):
         super().__init__(context)
-        data_dir = os.path.join(context.get_data_dir(), "kai_calendar")
+        data_dir = os.path.join(os.path.dirname(__file__), "data")
         os.makedirs(data_dir, exist_ok=True)
         self.db = CalendarDB(os.path.join(data_dir, "calendar.db"))
         self.backup_mgr = BackupManager(
