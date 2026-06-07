@@ -1,0 +1,6 @@
+name: kai_calendar
+display_name: Kai的日历系统
+desc: 经期追踪（黄体酮周期逻辑）、用药打卡（streak计数）、身体备注、纪念日（支持农历）、Kai备注栏、待办提醒、中国法定假日、趋势分析、自动备份。所有操作通过function calling由Kai在对话中自主调用。
+version: v1.0.0
+author: Kai & Sweetie
+repo: https://github.com/lucy1501126095-tech/kai-calendar
