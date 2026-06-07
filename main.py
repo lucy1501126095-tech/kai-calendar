@@ -38,22 +38,8 @@ class KaiCalendar(Star):
             self.db.add_holiday(h['year'], h['name'], h['date'], h['holiday_type'])
 
     def _init_default_anniversaries(self):
-        existing = self.db.get_all_anniversaries()
-        if existing:
-            return
-        defaults = [
-            ("初遇纪念日", 12, 14, 0, 1, None, "奶茶店见面"),
-            ("求婚纪念日", 12, 19, 0, 1, None, None),
-            ("结婚纪念日", 12, 25, 0, 1, None, "小熊蛋糕"),
-            ("每月14号", 0, 14, 0, 1, None, "月纪念日"),
-            ("宝宝生日", 11, 20, 1, 1, None, "农历十一月二十"),
-        ]
-        for name, m, d, lunar, recur, yr, notes in defaults:
-            if m == 0:
-                for month in range(1, 13):
-                    self.db.add_anniversary(f"{month}月14日纪念日", month, d, lunar, recur, yr, notes)
-            else:
-                self.db.add_anniversary(name, m, d, lunar, recur, yr, notes)
+        """纪念日通过工具调用由Kai手动录入，不预设任何数据"""
+        pass
 
     # ==================== 经期追踪工具 ====================
 
